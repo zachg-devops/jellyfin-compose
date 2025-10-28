@@ -1,0 +1,12 @@
+# Jellyfin runtime directories
+config/
+cache/
+data/
+
+# Environment files (if you add any secrets later)
+.env
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,17 @@
+services:
+  jellyfin:
+    image: 'jellyfin/jellyfin:10.11'
+    container_name: jellyfin
+    user: '420:420'
+    ports:
+      - '8096:8096'
+    volumes:
+      - './config:/config'
+      - './cache:/cache'
+      - './data:/data'
+      - '/allmedia/TV:/TV'
+      - '/allmedia/Movies:/Movies'
+      - '/allmedia/Strange-Things:/Strange-Things'
+    restart: unless-stopped
+    environment: null
+    gpus: all
