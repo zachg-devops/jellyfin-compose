@@ -18,6 +18,12 @@ Personal Jellyfin media server deployment configuration using Docker Compose.
 - `/allmedia/Movies` - Movies
 - `/allmedia/Strange-Things` - Strange Things content
 
+## Branch Workflow
+
+- **trunk**: Main development branch - push changes here for testing and development
+- **prod**: Production branch - Coolify auto-deploys from this branch
+- To deploy: merge or push changes from `trunk` to `prod`
+
 ## Coolify Auto-Deploy Setup
 
 To set up auto-deploy from GitHub to Coolify:
@@ -26,7 +32,7 @@ To set up auto-deploy from GitHub to Coolify:
    - Navigate to your Jellyfin service
    - Change the source from "Docker Compose" to "Git Repository"
    - Set Git repository URL: `https://github.com/zachg-devops/jellyfin-compose`
-   - Set branch: `trunk`
+   - Set branch: `prod`
    - Set build pack to "Docker Compose"
    - Enable "Automatic Deployment" toggle
    - Copy the webhook URL from Coolify
